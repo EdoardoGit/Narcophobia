@@ -57,7 +57,6 @@ public class DragController : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(wordPosition, Vector2.zero);
             if (hit.collider != null)
             {
-                //Debug.Log("Ho colpito "+hit.collider.tag);
                 Draggable draggable = hit.transform.gameObject.GetComponent<Draggable>();
                 if(draggable != null)
                 {
@@ -85,10 +84,6 @@ public class DragController : MonoBehaviour
         bool checkHit = false;
         foreach (RaycastHit2D hit in hits)
         {
-            if (hit.collider != null)
-            {
-                Debug.Log("Ho colpito " + hit.collider.tag);
-            }
 
             if (hit.collider.CompareTag("DropValid"))
             {

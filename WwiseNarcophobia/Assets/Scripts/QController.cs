@@ -23,7 +23,6 @@ public class QController : MonoBehaviour
                 RoomData.Instance.dimX = 6;
                 break;
         }
-        Debug.Log("Selezionato " + X + " valore salvato " + RoomData.Instance.dimX);
     }
 
     public void setY(int Z)
@@ -50,23 +49,8 @@ public class QController : MonoBehaviour
         RoomData.Instance.posPorta = i;
     }
 
-    public void setRooms()
-    {
-
-    }
-
     public void setPav(int i)
     {
         RoomData.Instance.pavMat = i;
-    }
-
-    public void back()
-    {
-        Debug.Log("Torno al main menù");
-    }
-
-    public void next()
-    {
-        Debug.Log("Passo alla prossima scena con queste informazioni: x " + RoomData.Instance.dimX + " z " + RoomData.Instance.dimZ + " pos " + RoomData.Instance.posPorta + " pav " + RoomData.Instance.pavMat);
     }
 }

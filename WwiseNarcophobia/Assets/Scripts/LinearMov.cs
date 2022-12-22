@@ -20,7 +20,6 @@ public class LinearMov : MonoBehaviour
     {
         timeCounter += Time.deltaTime * speed;
 
-        //float x = Mathf.Cos(timeCounter)*width;
         float z = Mathf.Cos(timeCounter) * height;
 
         transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, z);

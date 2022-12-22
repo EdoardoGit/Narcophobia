@@ -39,12 +39,10 @@ public class Customizer : MonoBehaviour
         CheckParameters();
     }
 
-    // Update is called once per frame
     void CheckParameters()
     {
         if(x!=0 && y!=0 && z != 0)
         {
-            //Debug.Log("Genero la stanza");
             GenerateRoom();
             GenerateGrid();
             SetupDoor();
@@ -57,7 +55,6 @@ public class Customizer : MonoBehaviour
     void GenerateRoom()
     {
         walls[0].transform.localScale = new Vector3(3 * x, y, 1f);
-        //Debug.Log("Nuovo Scaling:" + walls[0].transform.localScale);
         walls[0].transform.localPosition = new Vector3(0f, y / 2, -(z*1.5f + 0.5f));
         walls[1].transform.localScale = new Vector3(3 * x, y, 1f);
         walls[1].transform.localPosition = new Vector3(0f, y / 2, z*1.5f + 0.5f);
@@ -94,7 +91,6 @@ public class Customizer : MonoBehaviour
     void GenerateGrid()
     {
         int nGrid = x * z;
-        //Vector3 gridPos = new Vector3();
         for(int row = 0; row < z-1; row++)
         {
             for(int col = 0; col < x-1; col++)
@@ -242,20 +238,17 @@ public class Customizer : MonoBehaviour
     public void Setx()
     {
         x = RoomData.Instance.dimX;
-        Debug.Log("X settata a:" + x);
         //CheckParameters();
     }
 
     public void Setz()
     {
         z = RoomData.Instance.dimZ;
-        Debug.Log("Z settata a:" + z);
         //CheckParameters();
     }
 
     public void Sety()
     {
         y = altezza;
-        Debug.Log("Y settata a:" + y);
     }
 }

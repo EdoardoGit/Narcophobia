@@ -148,7 +148,6 @@ public class Controllert : MonoBehaviour
     public void setPos(int i)
     {
         RoomData.Instance.portaSet(i);
-        Debug.Log("Blabla" + RoomData.Instance.posPorta);
     }
 
     public void setPav(int i)
@@ -215,12 +214,5 @@ public class Controllert : MonoBehaviour
             if (ntap == 0)
                 reverse = true;
         }
-        //Debug.Log("tap=" + ntap);
     }
-
-    /*public void loadBuilder()
-    {
-        Debug.Log("Passo alla prossima scena con queste informazioni: x " + RoomData.dimX + " z " + RoomData.dimZ + " pos " + RoomData.posPorta + " pav " + RoomData.pavMat + " timer " + RoomData.timer);
-    }
-    */
 }

@@ -69,14 +69,12 @@ public class Draggable : MonoBehaviour
     {
         if (other.CompareTag("DropValid"))
         {
-            Debug.Log("Valido");
             return;/* movementDestination = other.transform.position;*/
         }
 
         Draggable collidedDraggable = other.GetComponent<Draggable>();
         if(collidedDraggable != null && dragController.LastDragged.gameObject == gameObject && !other.CompareTag("DropValid"))
         {
-            Debug.Log("Sposto l'oggetto");
             ColliderDistance2D colliderDistance2D = other.Distance(collider);
             Vector3 diff = new Vector3(colliderDistance2D.normal.x, colliderDistance2D.normal.y) * colliderDistance2D.distance;
             transform.position -= diff;

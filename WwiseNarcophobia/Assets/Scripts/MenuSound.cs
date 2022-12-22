@@ -11,7 +11,6 @@ public class MenuSound : MonoBehaviour
         menuSound.Post(gameObject);
     }
 
-    // Update is called once per frame
     public void onSceneChange()
     {
         menuSound.Stop(gameObject, 1000);

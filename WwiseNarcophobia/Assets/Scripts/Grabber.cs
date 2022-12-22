@@ -23,7 +23,6 @@ public class Grabber : MonoBehaviour
     private GameObject selected;
     private Vector3 reset;
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -41,7 +40,6 @@ public class Grabber : MonoBehaviour
 
                     selected = hit.collider.gameObject;
                     Cursor.visible = false;
-                    //Debug.Log(selected.transform.position.y);
                     reset = selected.transform.position;
                     
                 }
@@ -88,8 +86,6 @@ public class Grabber : MonoBehaviour
         Vector3 worldMousePosNear = Camera.main.ScreenToWorldPoint(ScreenMousePosNear);
         RaycastHit hit;
         Physics.Raycast(worldMousePosNear, worldMousePosFar - worldMousePosNear, out hit);
-        if (hit.collider != null) 
-            Debug.Log("Ho colpito " + hit.collider.tag);
         return hit;
     }
 
@@ -119,7 +115,6 @@ public class Grabber : MonoBehaviour
                 return;
             }
         }
-        Debug.Log("Nessuna Posizione valida");
         selected.transform.position = reset;
 
     }
